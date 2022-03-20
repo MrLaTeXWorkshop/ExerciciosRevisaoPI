@@ -1,0 +1,18 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{mypackage}
+
+\graphicspath{{img/}}
+
+\pgfplotsset{compat=1.18}
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\author{Gustavo Lopes Rodrigues}
+\title{Lista de exercícios No. 1 - Processamento de Imagens}
+\begin{document}
+
+	\maketitle
+
+	\foreach \n in {1,...,3}{\import{./questions}{\n.tex}}	
+	
+\end{document}s
