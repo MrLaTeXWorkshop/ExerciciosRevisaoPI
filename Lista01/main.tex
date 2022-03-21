@@ -3,7 +3,7 @@
 
 \graphicspath{{img/}}
 
-\pgfplotsset{compat=1.18}
+\pgfplotsset{compat=1.16}
 \pgfdeclarelayer{background}
 \pgfsetlayers{background,main}
 
@@ -13,6 +13,6 @@
 
 	\maketitle
 
-	\foreach \n in {1,...,3}{\import{./questions}{\n.tex}}	
+	\foreach \n in {1,...,4}{\import{questions/}{\n.tex}}	
 	
-\end{document}s
+\end{document}
