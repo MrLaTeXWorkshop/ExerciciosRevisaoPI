@@ -15,6 +15,8 @@
 \RequirePackage{indentfirst}
 \RequirePackage{pgffor}
 \RequirePackage{float}
+\RequirePackage{array}
+\RequirePackage{calc}
 
 \newcounter{instn}
 \setcounter{instn}{1}
@@ -31,3 +33,28 @@
     }
     {
  }
+
+ \newlength\celldim
+\newlength\fontheight
+\newlength\extraheight
+\newcounter{sqcolumns}
+
+\newcolumntype{S}{
+ @{}
+ >{\centering \rule[-0.5\extraheight]{0pt}{\fontheight + \extraheight}%
+ \begin{minipage}{\celldim}\centering}
+ p{\celldim}
+ <{\end{minipage}} 
+ @{} }
+
+\newcolumntype{Z}{ @{} >{\centering} p{\celldim} @{} }
+
+\newenvironment{image}[1]
+  {\setlength\celldim{2.5em}%
+   \settoheight\fontheight{A}%
+   \setlength\extraheight{\celldim - \fontheight}%
+   \setcounter{sqcolumns}{#1 - 1}%
+   \begin{tabular}{|S|*{\value{sqcolumns}}{Z|}}\hline}
+  {\end{tabular}}
+
+\newcommand\nl{\tabularnewline\hline}

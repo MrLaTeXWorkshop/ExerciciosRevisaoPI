@@ -4,8 +4,9 @@
         \item 
         
         \begin{minipage}{\linewidth}
-            \centering
             
+            \parbox{.30\linewidth}{
+            \centering
             \begin{tikzpicture}[font=\small, scale=0.5]
                 \begin{axis}[
                   ybar,
@@ -32,9 +33,10 @@
                   };
                 \end{axis}
             \end{tikzpicture}
-
-            \hspace{0.5cm}
-
+            }
+            \hfill
+            \parbox{.30\linewidth}{
+            \centering
             \begin{tikzpicture}[font=\small, scale=0.5]
                 \begin{axis}[
                   ybar,
@@ -61,9 +63,10 @@
                   };
                 \end{axis}
             \end{tikzpicture}
-
-            \hspace{0.5cm}
-            
+            }
+            \hfill
+            \parbox{.30\linewidth}{
+            \centering
             \begin{tikzpicture}[font=\small, scale=0.5]
                 \begin{axis}[
                   ybar,
@@ -88,10 +91,92 @@
                   };
                 \end{axis}
             \end{tikzpicture}
+            }
         \end{minipage}
  
         \item 
 
+        \item 
 
+        \item 
+        
+          $MAX = 255$
+          
+          $N = 25$
+
+          $\frac{MAX}{n} = 10$
+          \begin{table}[ht]
+
+            \parbox{.45\linewidth}{
+            \centering 
+            \begin{tabular}{|c|c|c|c|}
+              \hline 
+              s & h(s) & Somatório & r \\
+              \hline
+              1 & 13 & 13 & 130 \\
+              \hline
+              2 & 6 & 19 & 190 \\ 
+              \hline
+              3 & 1 & 20 & 200 \\ 
+              \hline
+              4 & 1 & 21 & 210 \\ 
+              \hline
+              5 & 2 & 23 & 230 \\ 
+              \hline
+              6 & 2 & 25 & 250 \\ 
+              \hline 
+            \end{tabular}
+            \caption{Encontrando os novos valores}
+            }
+            \hfill
+            \parbox{.45\linewidth}{
+              \centering 
+              \begin{image}{5}
+                200 & 230 & 190 & 130 & 130 \nl
+                130 & 210 & 250 & 190 & 130 \nl
+                130 & 130 & 230 & 250 & 190 \nl 
+                130 & 130 & 130 & 130 & 130 \nl 
+                130 & 190 & 190 & 190 & 130 \nl 
+              \end{image}
+              \caption{Nova imagem}
+            }
+          \end{table}
+
+          \begin{table}[ht]
+
+            \parbox{.45\linewidth}{
+            \centering 
+            \begin{tabular}{|c|c|c|c|}
+              \hline 
+              s & h(s) & Somatório & r \\
+              \hline
+              1 & 7 & 7 & 70 \\
+              \hline
+              2 & 4 & 11 & 110 \\ 
+              \hline
+              5 & 2 & 13 & 130 \\ 
+              \hline
+              6 & 4 & 17 & 170 \\ 
+              \hline
+              7 & 3 & 20 & 200 \\ 
+              \hline
+              8 & 5 & 25 & 250 \\ 
+              \hline 
+            \end{tabular}
+            \caption{Encontrando os novos valores}
+            }
+            \hfill
+            \parbox{.45\linewidth}{
+              \centering 
+              \begin{image}{5}
+                130 & 70 & 110 & 70 & 250 \nl
+                170 & 170 & 130 & 170 & 70 \nl
+                110 & 70 & 250 & 200 & 200 \nl 
+                170 & 70 & 110 & 250 & 250 \nl 
+                200 & 250 & 110 & 70 & 70 \nl 
+              \end{image}
+              \caption{Nova imagem}
+            }
+          \end{table}
     \end{enumerate}
 \end{question}
