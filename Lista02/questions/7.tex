@@ -103,7 +103,8 @@
           
           $N = 25$
 
-          $\frac{MAX}{n} = 10$
+          $r = round(\frac{Somatorio}{n}*MAX)$
+
           \begin{table}[ht]
 
             \parbox{.45\linewidth}{
@@ -112,17 +113,17 @@
               \hline 
               s & h(s) & Somatório & r \\
               \hline
-              1 & 13 & 13 & 130 \\
+              1 & 13 & 13 & 133 \\
               \hline
-              2 & 6 & 19 & 190 \\ 
+              2 & 6 & 19 & 194 \\ 
               \hline
-              3 & 1 & 20 & 200 \\ 
+              3 & 1 & 20 & 204 \\ 
               \hline
-              4 & 1 & 21 & 210 \\ 
+              4 & 1 & 21 & 214 \\ 
               \hline
-              5 & 2 & 23 & 230 \\ 
+              5 & 2 & 23 & 235 \\ 
               \hline
-              6 & 2 & 25 & 250 \\ 
+              6 & 2 & 25 & 255 \\ 
               \hline 
             \end{tabular}
             \caption{Calculando novos valores de A}
@@ -131,11 +132,11 @@
             \parbox{.45\linewidth}{
               \centering 
               \begin{image}{5}
-                200 & 230 & 190 & 130 & 130 \nl
-                130 & 210 & 250 & 190 & 130 \nl
-                130 & 130 & 230 & 250 & 190 \nl 
-                130 & 130 & 130 & 130 & 130 \nl 
-                130 & 190 & 190 & 190 & 130 \nl 
+                204 & 235 & 194 & 133 & 133 \nl
+                133 & 214 & 255 & 194 & 133 \nl
+                133 & 133 & 235 & 255 & 194 \nl 
+                133 & 133 & 133 & 133 & 133 \nl 
+                133 & 194 & 194 & 194 & 133 \nl 
               \end{image}
               \caption{Imagem A com equalização}
             }
@@ -149,17 +150,17 @@
               \hline 
               s & h(s) & Somatório & r \\
               \hline
-              1 & 7 & 7 & 70 \\
+              1 & 7 & 7 & 71 \\
               \hline
-              2 & 4 & 11 & 110 \\ 
+              2 & 4 & 11 & 112 \\ 
               \hline
-              5 & 2 & 13 & 130 \\ 
+              5 & 2 & 13 & 133 \\ 
               \hline
-              6 & 4 & 17 & 170 \\ 
+              6 & 4 & 17 & 173 \\ 
               \hline
-              7 & 3 & 20 & 200 \\ 
+              7 & 3 & 20 & 204 \\ 
               \hline
-              8 & 5 & 25 & 250 \\ 
+              8 & 5 & 25 & 255 \\ 
               \hline 
             \end{tabular}
             \caption{Calculando novos valores de B}
@@ -168,11 +169,11 @@
             \parbox{.45\linewidth}{
               \centering 
               \begin{image}{5}
-                130 & 70 & 110 & 70 & 250 \nl
-                170 & 170 & 130 & 170 & 70 \nl
-                110 & 70 & 250 & 200 & 200 \nl 
-                170 & 70 & 110 & 250 & 250 \nl 
-                200 & 250 & 110 & 70 & 70 \nl 
+                133 & 71 & 112 & 71 & 255 \nl
+                173 & 173 & 133 & 173 & 71 \nl
+                112 & 71 & 255 & 204 & 204 \nl 
+                173 & 71 & 112 & 255 & 255 \nl 
+                204 & 255 & 112 & 71 & 71 \nl 
               \end{image}
               \caption{Imagem B com equalização}
             }
@@ -186,15 +187,15 @@
               \hline 
               s & h(s) & Somatório & r \\
               \hline
-              1 & 10 & 10 & 100 \\
+              1 & 10 & 10 & 102 \\
               \hline
-              2 & 4 & 14 & 140 \\ 
+              2 & 4 & 14 & 143 \\ 
               \hline
-              7 & 1 & 15 & 150 \\ 
+              7 & 1 & 15 & 153 \\ 
               \hline
-              8 & 5 & 20 & 200 \\ 
+              8 & 4 & 20 & 194 \\ 
               \hline
-              9 & 6 & 26 & 255 \\ 
+              9 & 6 & 25 & 255 \\ 
               \hline
             \end{tabular}
             \caption{Calculando novos valores de C}
@@ -203,17 +204,19 @@
             \parbox{.45\linewidth}{
               \centering 
               \begin{image}{5}
-                100 & 100 & 255 & 100 & 100 \nl
-                100 & 100 & 255 & 200 & 150 \nl
-                255 & 255 & 255 & 140 & 100 \nl 
-                100 & 100 & 140 & 200 & 200 \nl 
-                100 & 140 & 140 & 200 & 255 \nl 
+                102 & 102 & 255 & 102 & 102 \nl
+                102 & 102 & 255 & 194 & 153 \nl
+                255 & 255 & 255 & 143 & 102 \nl 
+                102 & 102 & 143 & 194 & 194 \nl 
+                102 & 143 & 143 & 194 & 255 \nl 
               \end{image}
               \caption{Imagem C com equalização}
             }
           \end{table}
           
           \newpage 
+
+          %%%%%%%%%%%%%%%%%%%% SOBEL %%%%%%%%%%%%%%%%%%%%%%
 
           \item Sobel 
 
@@ -225,7 +228,7 @@
                 -2 & 0 & 2 \nl
                 -1 & 0 & 1 \nl 
               \end{image}
-              \caption{Kernel sobel na direção X}
+              \caption{Kernel sobel G(x)}
             }
             \parbox{.45\linewidth}{
               \centering 
@@ -243,13 +246,13 @@
           \begin{table}[ht]
             \centering 
               \begin{image}{5}
-                3 & 5 & 2 & 1 & 1 \nl
-                1 & 4 & 6 & 2 & 1 \nl
-                1 & 1 & 5 & 6 & 2 \nl 
-                1 & 1 & 1 & 1 & 1 \nl 
-                1 & 2 & 2 & 2 & 1 \nl 
+                * & * & * & * & * \nl
+                * & -13 & 3 & 14 & * \nl
+                * & -13 & -8 & 11 & * \nl 
+                * & -5 & -5 & 4 & * \nl 
+                * & * & * & * & * \nl 
               \end{image}
-              \caption{Imagem A com sobel na direção X}
+              \caption{Imagem A com sobel G(x)}
           \end{table}
 
           \begin{table}[ht]
@@ -260,7 +263,7 @@
                 0 & 0 & 0 \nl
                 1 & 2 & 1 \nl 
               \end{image}
-              \caption{Kernel sobel na direção Y}
+              \caption{Kernel sobel G(y)}
             }
             \parbox{.45\linewidth}{
               \centering 
@@ -279,14 +282,26 @@
 
           \begin{table}[ht]
             \centering 
-              \begin{image}{5}
-                3 & 5 & 2 & 1 & 1 \nl
-                1 & 4 & 6 & 2 & 1 \nl
-                1 & 1 & 5 & 6 & 2 \nl 
-                1 & 1 & 1 & 1 & 1 \nl 
-                1 & 2 & 2 & 2 & 1 \nl 
-              \end{image}
+            \begin{image}{5}
+              * & * & * & * & * \nl
+              * & 7 & 7 &  14 & * \nl
+              * & 11 & 14 & 7 & * \nl 
+              * & 1 & 9 & 12 & * \nl 
+              * & * & * & * & * \nl 
+            \end{image}
               \caption{Imagem A com sobel na direção Y}
+          \end{table}
+
+          \begin{table}[ht]
+            \centering 
+            \begin{image}{5}
+              * & * & * & * & * \nl
+              * & 20 & 10 &  28 & * \nl
+              * & 24 & 22 & 18 & * \nl 
+              * & 6 & 14 & 16 & * \nl 
+              * & * & * & * & * \nl 
+            \end{image}
+              \caption{Imagem A com sobel $|G(x)| + |G(y)|$}
           \end{table}
 
         \end{enumerate}
