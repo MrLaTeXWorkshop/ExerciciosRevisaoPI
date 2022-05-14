@@ -2,21 +2,16 @@
 
     \begin{enumerate}[label=\textbf{\alph*})]
 		\item Os elementos de baixa frequência são aqueles que possuem 
-		baixa variabilidade na mudança do tons de cinza na imagem, então isso seria 
-		a região onde tem o fundo preto e as regiões do cérebro com cor homogênea por exemplo.
+		baixa variabilidade na mudança do tons de cinza na imagem(homogênea), então isso seria 
+		a região onde tem o fundo preto.
   		\item Os elementos de alta frequência seriam aqueles onde há uma brusca modificação 
-        do nível do tom de cinza na imagem. Isto seria por exemplo a transição do fundo preto 
-		para o cérebro e da região central do cérebro onde vai do branco para o cinza. 
-    	\item Para obter a imagem B a partir de A, foi aplicado uma convulação de uma máscara 
-        de blur gaussiano, isso é perceptível pela perca de detalhes, além do fato que 
-		as bordas estão consideravelmente mais borradas.
-        \item Para obter a Imagem C, foi aplicado o desfoque que gerou a imagem B, e então 
-        foi aplicado um operador de Laplace ( também conhecido como Sharpen ). Isto pode ser notado 
-		pelo fato que a imagem C é notavelmente mais nítida que a imagem B, porém não possui 
-		o nível de detalhes que o crânio tem na Imagem A. Em compensação, o ruído foi removido
+        do nível do tom de cinza na imagem. Isto seria as bordas e o ruído.
+    	\item Para obter a imagem B a partir de A, foi aplicado um filtro da média. Pois a imagem 
+		teve seus elementos de alta frequência suavizados
+        \item O filtro de mediana foi passado para obter a imagem C, o ruído de alta frequência foi 
+        suavizado com as bordas preservadas
         \item Por fim, a imagem D é o resultado do filtro de Sobel para detecção de bordas, o que 
-        pode explicar porque a imagem tem apenas dois tons, preto para indicar o fundo, e branco 
-		para detectar as bordas, incluindo as bordas dos ruídos da imagem original. 
+        pode explicar os elementos de alta frequência realçados e os de baixa frequência suavizados.
 	\end{enumerate}
     
 \end{question}

@@ -1,13 +1,68 @@
+\newpage
+
 \begin{question}
 
-    \begin{table}[ht]
+    $f(x) = cos (\omega x$)
+
+    intervalo = $0 \leq x < 2$ 
+
+    $\omega = \frac{2\pi}{P}$, $\omega = \frac{2\pi}{2} = \pi$
+
+    P = tamanho do intervalo
+
+    \textbf{vetor} = $[ cos(0*\pi), cos(1*\pi) ]$
+
+    \textbf{vetor} = $[ 1, -1 ]$
+      
+    $F(0) = \frac{1}{2} * [ 1(\frac{cos(0)}{2} - \frac{i sen(0)}{2}) -1(\frac{cos(0)}{2} - \frac{i sen(0)}{2}) ]$
+
+    $F(0) = \frac{1}{2} * [ 1(\frac{1}{2} - \frac{0}{2}) -1(\frac{1}{2} - \frac{i sen(0)}{2}) ]$
+
+    $F(0) = \frac{1}{2} * [ 1-1 ]$
+
+    $F(0) = 0$ 
+
+    \vspace*{0.5cm}
+
+    $F(1) = \frac{1}{2} * [ 1(\frac{cos(0)}{2} - \frac{i sen(0)}{2}) -1(\frac{cos(2*\pi*-1)}{2} - \frac{i sen(2*\pi*-1)}{2}) ]$
+
+    $F(1) = \frac{1}{2} * [ 1 -1(\frac{1}{2} - \frac{i 0}{2}) ]$
+
+    $F(1) = \frac{1}{2} * [ 1 -1(-1 - i sen\pi) ]$
+
+    $F(1) = \frac{1}{2} * [ 2 ] = 1$ 
+    
+    \begin{minipage}{\linewidth}
         \centering 
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|c|c|c|}
             \hline
-            k & k & k & k \\ 
-            k & k & k & k \\ 
+            a & 0 & 1 \\
+            \hline
+            u & 0 & 0 \\
             \hline
         \end{tabular}
-    \end{table}
+
+    \end{minipage}
+    
+    \textbf{vetor} = $[ 1, -1 ]$
+
+    \begin{minipage}{\linewidth}
+        \centering 
+        \begin{tikzpicture}
+            \begin{axis}[
+             clip=false,
+             xmin=0,xmax=2*pi,
+             %axis lines=left,
+             %axis x line=middle,
+             %axis y line=left,
+             xtick={0,1.57,3.14,4.71,6.28},
+             xticklabels={,,}
+             ]
+              \addplot[domain=0:2*pi,samples=200,blue]{cos(deg(x))}node[right,pos=0.9]{$f(x)=\cos x$};
+              \draw[ultra thin] (axis cs:\pgfkeysvalueof{/pgfplots/xmin},0) -- (axis cs:\pgfkeysvalueof{/pgfplots/xmax},0);
+              \draw[ultra thin] (axis cs:0,\pgfkeysvalueof{/pgfplots/ymin}) -- (axis cs:0,\pgfkeysvalueof{/pgfplots/ymax});
+            \end{axis}
+          \end{tikzpicture}
+    \end{minipage}
   
 \end{question}

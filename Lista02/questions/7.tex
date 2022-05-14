@@ -93,9 +93,51 @@
             }
         \end{minipage}
  
-        \item 
+        \newpage
 
-        \item 
+        \item Filtro de suavização pela média
+        
+        Lembrando: somar todos os elementos e dividir pelo tamanho da 
+        kernel (nesse caso por nove)
+
+        \begin{table}[ht]
+          \parbox{.45\linewidth}{
+            \centering 
+            \begin{image}{3}
+              1 & 1 & 1 \nl
+              1 & 1 & 1 \nl
+              1 & 1 & 1 \nl 
+            \end{image}
+            \caption{Kernel da media}
+          }
+          \parbox{.45\linewidth}{
+            \centering 
+            \begin{image}{5}
+              * & * & * & * & * \nl
+              * & 3 & 4 & 3 & * \nl
+              * & 2 & 3 & 3 & * \nl 
+              * & 2 & 2 & 2 & * \nl 
+              * & * & * & * & * \nl 
+            \end{image}
+            \caption{Imagem A com suavização pela média}
+          }
+        \end{table}
+
+        \item Filtro de suavização pela mediana 
+      
+        Basta encontrar em uma kernel 3x3 o valor de pixel que está no centro da distribuição(mediana)
+
+        \begin{table}[ht]
+          \centering 
+            \begin{image}{5}
+              * & * & * & * & * \nl
+              * & 3 & 4 & 2 & * \nl
+              * & 1 & 2 & 2 & * \nl 
+              * & 1 & 2 & 2 & * \nl 
+              * & * & * & * & * \nl 
+            \end{image}
+            \caption{Imagem A com suavização pela mediana}
+        \end{table}
 
         \item 
         
@@ -233,27 +275,17 @@
             \parbox{.45\linewidth}{
               \centering 
               \begin{image}{5}
-                3 & 5 & 2 & 1 & 1 \nl
-                1 & 4 & 6 & 2 & 1 \nl
-                1 & 1 & 5 & 6 & 2 \nl 
-                1 & 1 & 1 & 1 & 1 \nl 
-                1 & 2 & 2 & 2 & 1 \nl 
-              \end{image}
-              \caption{Imagem A}
-            }
-          \end{table}
-
-          \begin{table}[ht]
-            \centering 
-              \begin{image}{5}
                 * & * & * & * & * \nl
-                * & -13 & 3 & 14 & * \nl
-                * & -13 & -8 & 11 & * \nl 
-                * & -5 & -5 & 4 & * \nl 
+                * & 13 & -3 & -14 & * \nl
+                * & 13 & 8 & -11 & * \nl 
+                * & 5 & 5 & -4 & * \nl 
                 * & * & * & * & * \nl 
               \end{image}
               \caption{Imagem A com sobel G(x)}
+            }
           \end{table}
+
+          \newpage
 
           \begin{table}[ht]
             \parbox{.45\linewidth}{
@@ -268,28 +300,14 @@
             \parbox{.45\linewidth}{
               \centering 
               \begin{image}{5}
-                3 & 5 & 2 & 1 & 1 \nl
-                1 & 4 & 6 & 2 & 1 \nl
-                1 & 1 & 5 & 6 & 2 \nl 
-                1 & 1 & 1 & 1 & 1 \nl 
-                1 & 2 & 2 & 2 & 1 \nl 
+                * & * & * & * & * \nl
+                * & -7 & -7 &  -14 & * \nl
+                * & -11 & -14 & -7 & * \nl 
+                * & -1 & -9 & -12 & * \nl 
+                * & * & * & * & * \nl 
               \end{image}
-              \caption{Imagem A}
-            }
-          \end{table}
-
-          \newpage 
-
-          \begin{table}[ht]
-            \centering 
-            \begin{image}{5}
-              * & * & * & * & * \nl
-              * & 7 & 7 &  14 & * \nl
-              * & 11 & 14 & 7 & * \nl 
-              * & 1 & 9 & 12 & * \nl 
-              * & * & * & * & * \nl 
-            \end{image}
               \caption{Imagem A com sobel na direção Y}
+            }
           \end{table}
 
           \begin{table}[ht]
