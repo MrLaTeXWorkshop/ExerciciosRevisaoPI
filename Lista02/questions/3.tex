@@ -1,27 +1,77 @@
 \begin{question}
 
-    \begin{table}[ht]
-        \parbox{.45\linewidth}{
-          \centering 
-          \begin{image}{3}
-            -1 & 0 & 1 \nl
-            -2 & 0 & 2 \nl
-            -1 & 0 & 1 \nl 
-          \end{image}
-          \caption{Imagem A}
-        }
-        \parbox{.45\linewidth}{
-          \centering 
-          \begin{image}{5}
-            3 & 5 & 2 & 1 & 1 \nl
-            1 & 4 & 6 & 2 & 1 \nl
-            1 & 1 & 5 & 6 & 2 \nl 
-            1 & 1 & 1 & 1 & 1 \nl 
-            1 & 2 & 2 & 2 & 1 \nl 
-          \end{image}
-          \caption{Imagem B}
-        }
-      \end{table}
-    
+    \begin{enumerate}[label=\textbf{\alph*})]
+      \item
+      
+      \begin{minipage}{\linewidth}
+        \centering 
+        \begin{tabular}{|c|c|c|c|c|c|}
+          \hline 
+          \textbf{a} & 3.0 & -0.5 & -0.5 & -0.5 & -0.5  \\
+          \hline 
+          \textbf{b} & 0 & 0.69i & 0.16i & -0.16i & -0.69i \\ 
+          \hline 
+        \end{tabular}
+      \end{minipage}
+
+
+      f(0) = 3.0 + (-0.5) + (-0.5) + (-0.5) + (-0.5) $\rightarrow$ apenas somar os valores de \textbf{a}
+      
+      f(0) = 1
+
+      f(1) = 3.0*(1) 
+      
+             + (-0.5+0.69i) (cos$\frac{2\pi*1*1}{5}$ + isen$\frac{2\pi*1*1}{5}$) 
+
+             + (-0.5+0.16i) (cos$\frac{2\pi*1*2}{5}$ + isen$\frac{2\pi*1*2}{5}$)  
+
+             + (-0.5-0.16i) (cos$\frac{2\pi*1*3}{5}$ + isen$\frac{2\pi*1*3}{5}$)  
+
+             + (-0.5-0.69i) (cos$\frac{2\pi*1*4}{5 }$ + isen$\frac{2\pi*1*4}{5}$)  
+
+      f(1) = 3.0*(1) 
+
+             + (-0.5+0.69i) (0.31 + i*0.95) 
+
+             + (-0.5+0.16i) (-0.81 + i*0.59)  
+
+             + (-0.5-0.16i) (-0.81 + i*-0.59)  
+
+             + (-0.5-0.69i) (0.31 + i*-0.95)  
+
+
+      \item
+      
+      \begin{minipage}{\linewidth}
+        \centering 
+        \begin{tabular}{|c|c|c|c|c|}
+          \hline 
+          \textbf{a} & 1.5 & -0.25 & 0 & -0.25 \\
+          \hline 
+          \textbf{b} & 0 & -0.25i & 0 & +0.25i \\ 
+          \hline 
+        \end{tabular}
+      \end{minipage}
+
+      f(0) = 1.5 -0.25 -0.25
+      
+      f(0) = 1
+
+      f(1) = 1.5 *(1) 
+      
+             + (-0.25-0.25i) (cos$\frac{2\pi*1*1}{4}$ + isen$\frac{2\pi*1*1}{4}$) 
+
+             + (-0.25+0.25i) (cos$\frac{2\pi*1*3}{4}$ + isen$\frac{2\pi*1*3}{4}$)  
+
+      f(1) = 1.5 *(1) 
+      
+             + (-0.25-0.25i) (+ i) 
+
+             + (-0.25+0.25i) (- i)  
+
+      f(1) = 1.5 +0.25 +0.25
+      
+      f(1) = 2
+    \end{enumerate}
 \end{question}
   

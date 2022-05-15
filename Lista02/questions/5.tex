@@ -1,13 +1,104 @@
-\newpage
 \begin{question}
 
-    \begin{table}[ht]
+    \begin{enumerate}[label=\textbf{\alph*})]
+        \item 
+    
+        numero de pixels = 5
+    
+      F(0) = $\frac{0 + 1 + 0 + 0 + 0}{5}$
+    
+      F(0) = $\frac{1}{5}$ = 0.20
+    
+      F(1) = 0*(1) 
+    
+      + 1(cos($\frac{2\pi*1*1}{5}$) - isen($\frac{2\pi*1*1}{5}$))
+      
+      + 0(cos($\frac{2\pi*2*1}{5}$) - isen($\frac{2\pi*2*1}{5}$))
+    
+      + 0(cos($\frac{2\pi*3*1}{5}$) - isen($\frac{2\pi*3*1}{5}$))
+    
+      + 0(cos($\frac{2\pi*4*1}{5}$) - isen($\frac{2\pi*4*1}{5}$)) 
+    
+      F(1) =  $\frac{0.31 + 0.95i}{5}$
+    
+      F(1) = 0.062 + 0.19i
+    
+      F(2) = 0*(1) 
+    
+      + 1(cos($\frac{2\pi*1*2}{5}$) - isen($\frac{2\pi*1*2}{5}$))
+      
+      + 0(cos($\frac{2\pi*2*2}{5}$) - isen($\frac{2\pi*2*2}{5}$))
+    
+      + 0(cos($\frac{2\pi*3*2}{5}$) - isen($\frac{2\pi*3*2}{5}$))
+    
+      + 0(cos($\frac{2\pi*4*2}{5}$) - isen($\frac{2\pi*4*2}{5}$)) 
+    
+      F(2) =  $\frac{-0.81 + 0.59i}{5}$
+    
+      F(2) = -0.162 + 0.118i
+    
+      \begin{table}[ht]
         \centering 
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|c|}
             \hline
-            k & k & k & k \\ 
-            k & k & k & k \\ 
+            \textbf{a} & 0.20 & 0.062 & -0.162 & -0.162 & 0.062 \\ 
+            \hline
+            \textbf{b} & 0 & 0.19i & 0.118i & -0.118i & -0.19i \\ 
             \hline
         \end{tabular}
       \end{table}
+    
+      \item 
+    
+      numero de pixels = 5
+    
+      F(0) = $\frac{0 + 0 + 1 + 0 + 0}{5}$
+    
+      F(0) = $\frac{1}{5}$ = 0.20
+    
+      F(1) = 0*(1) 
+    
+      + 0(cos($\frac{2\pi*1*1}{5}$) - isen($\frac{2\pi*1*1}{5}$))
+      
+      + 1(cos($\frac{2\pi*2*1}{5}$) - isen($\frac{2\pi*2*1}{5}$))
+    
+      + 0(cos($\frac{2\pi*3*1}{5}$) - isen($\frac{2\pi*3*1}{5}$))
+    
+      + 0(cos($\frac{2\pi*4*1}{5}$) - isen($\frac{2\pi*4*1}{5}$)) 
+    
+      F(1) =  $\frac{-0.81 + 0.59i}{5}$
+    
+      F(1) = -0.162 + 0.118i
+    
+      F(2) = 0*(1) 
+    
+      + 0(cos($\frac{2\pi*1*2}{5}$) - isen($\frac{2\pi*1*2}{5}$))
+      
+      + 1(cos($\frac{2\pi*2*2}{5}$) - isen($\frac{2\pi*2*2}{5}$))
+    
+      + 0(cos($\frac{2\pi*3*2}{5}$) - isen($\frac{2\pi*3*2}{5}$))
+    
+      + 0(cos($\frac{2\pi*4*2}{5}$) - isen($\frac{2\pi*4*2}{5}$)) 
+    
+      F(2) =  $\frac{-0.31 - 0.95i}{5}$
+    
+      F(2) = 0.062 + 0.19i
+
+      \begin{table}[ht]
+        \centering 
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \textbf{a} & 0.20 & -0.162 & 0.062 & 0.062 & -0.162 \\ 
+            \hline
+            \textbf{b} & 0 & 0.118i & 0.19i & -0.19i & -0.118i \\ 
+            \hline
+        \end{tabular}
+      \end{table}
+
+      \end{enumerate}
+
+      Observa-se que as matrizes de Fourier gerada em ambos os casos são 
+      muito parecidas, não só são parecidas, como também é possível gerar 
+      uma a partir da outra, usando a propriedade da translação multiplicando 
+      as frequências de uma das matrizes pela constante exp($\frac{-i2\pi au}{N}$)
 \end{question}
